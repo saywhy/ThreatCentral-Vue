@@ -1,6 +1,8 @@
 import axios from "../axios"
 import loginUrls from "@api/urls/login"
 
+import loginLayouts from "@api/urls/layout"
+
 export default {
   // 账号密码登陆
   // / site / signin
@@ -18,7 +20,7 @@ export default {
   fetchCreateAdmin (data) {
     return axios.post(loginUrls.CreateAdmin, data)
   },
-  // 退出登录 
+  // 退出登录
   fetchLogout (data) {
     return axios.post(loginUrls.Logout, data)
   },

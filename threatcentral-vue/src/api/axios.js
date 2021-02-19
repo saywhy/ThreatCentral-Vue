@@ -21,13 +21,12 @@ axios.interceptors.request.use(config => {
 axios.interceptors.response.use(
   response => {
     // NProgress.done()
-    console.log(response);
     return response
   },
   error => {
-    console.log("error", error);
+    /*console.log("error", error);
     console.log(error.response.status);
-    console.log(error.response.data.message);
+    console.log(error.response.data.message);*/
     switch (error.response.status) {
       case 500:
         localStorage.removeItem("info");

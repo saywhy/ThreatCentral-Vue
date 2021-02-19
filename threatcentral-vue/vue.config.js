@@ -102,6 +102,7 @@ module.exports = {
     proxy: { //配置多个跨域
       "/api": {
         target: "https://116.63.144.54/",
+        //target: "https://192.168.1.245/",
         changeOrigin: true,
         ws: true,//websocket支持
         secure: false,
@@ -110,7 +111,5 @@ module.exports = {
         }
       },
     }
-
-
   }
 }

@@ -1,5 +1,5 @@
 <template>
-  <div id="login">
+  <div id="login" v-cloak>
     <el-form ref="form"
              :model="loginForm"
              label-width="80px">
@@ -26,9 +26,7 @@
 </template>
 <script>
 import LoginApi from "@/api/apis/login";
-import LayoutApi from "@/api/apis/layout";
 import { defaultRouter, asyncRouter } from "@/router/index";
-import { json } from 'body-parser';
 export default {
   name: '',
   data () {
@@ -42,11 +40,18 @@ export default {
   methods: {
 
     submitForm () {
+
+      var locate = window.localStorage;
+      locate.clear();
+
       LoginApi.fetchLogin({ 'LoginForm': this.loginForm, "login-button": "" }).then(res => {
-        console.log(res);
+
         //登陆成功
-        localStorage.setItem("login", '202');
-        this.$router.push({ path: "/home/overView" });
+        locate.setItem("token", 'admin');
+
+        this.$message.success('登录成功');
+        this.$router.push('/', () => { });
+
       }).catch(error => {
         console.log(error);
       })

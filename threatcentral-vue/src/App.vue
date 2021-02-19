@@ -10,8 +10,7 @@
 export default {
   name: "app",
   mounted () {
-    console.log(process.env.NODE_ENV);
-    console.log(process);
+   // console.log(process.env.NODE_ENV);
   },
 }
 </script>
