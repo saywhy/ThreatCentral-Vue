@@ -52,7 +52,6 @@
       z-index: 1000;
       height: auto !important;
     }
-
     .dashboard-list {
       margin-top: 60px;
       min-height: 900px;
@@ -102,12 +101,12 @@
           /* border-radius: 6px;*/
         }
         &::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
-          border-radius: 6px;
+          border-radius: 10px;
           background: #a8a8a8;
           /*background: red;*/
         }
         &::-webkit-scrollbar-track {/*滚动条里面轨道*/
-          border-radius: 6px;
+          border-radius: 10px;
           background: #f4f4f4;
         }
         &.collapse {
@@ -127,6 +126,7 @@
       width: 100%;
       font-size: 16px;
       z-index: 999;
+      text-align: center;
     }
   }
   .slider-enter {

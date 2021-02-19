@@ -1,6 +1,5 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import Login from "@/views/login/login"
 import Layout from "@/views/layout/layout"
 Vue.use(VueRouter);
 
@@ -23,7 +22,7 @@ let defaultRouter = [
   {
     path: "/login",
     name: "Login",
-    component: Login,
+    component: () => import('@/views/login/login')
   }
 ];
 const asyncRouter = [
@@ -78,7 +77,7 @@ const asyncRouter = [
         },
         children: [{
             path: '/intelligence/system/search',
-            name: 'threaten',
+            name: 'search',
             meta: {
               title: '情报查询',
               auth: '16',

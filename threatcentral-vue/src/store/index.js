@@ -12,7 +12,7 @@ const store = new Vuex.Store({
   modules:{
     layout,
   },
-  strict: debug, //是否开启严格模式
+  //strict: debug, //是否开启严格模式
 })
 
 export default store;
